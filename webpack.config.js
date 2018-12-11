@@ -4,13 +4,13 @@ const merge = require('webpack-merge');
 module.exports = merge(require('./webpack.base'), {
     context: __dirname,
 
-    entry: './src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
 
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         library: {
-            root: 'VueTabs',
+            root: 'vuetabs',
             amd: 'vue-tabs',
             commonjs: 'vue-tabs'
         },
