@@ -2,7 +2,7 @@
     <section v-show="isActive"
              :aria-hidden="! isActive"
              class="tabs-component-panel"
-             :id="computedId"
+             :id="hash"
              role="tabpanel"
     >
         <slot />
@@ -29,16 +29,14 @@
                 return this.prefix + this.name + this.suffix;
             },
 
-            computedId() {
-                return this.id ? this.id : this.name.toLowerCase().replace(/ /g, '-');
-            },
-
             hash() {
                 if (this.isDisabled) {
                     return '#';
                 }
 
-                return '#' + this.computedId;
+                return this.id ?
+                    '#' + this.id :
+                    '#' + this.name.toLowerCase().replace(/ /g, '-');
             },
         },
     };
