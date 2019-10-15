@@ -141,7 +141,7 @@
 
                     this.tabs.every((tab, index, array) => {
                         if (tab.isVisible) {
-                            tab.isActive = true;
+                            this.selectTab(tab.hash)
 
                             return false;
                         }
