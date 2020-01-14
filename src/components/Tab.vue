@@ -36,7 +36,7 @@
 
                 return this.id ?
                     '#' + this.id :
-                    '#' + this.name.toLowerCase().replace(/ /g, '-');
+                    '#' + encodeURIComponent(this.name);
             },
         },
     };

@@ -2,6 +2,9 @@
 
 All notable changes to `vue-tabs-component` will be documented in this file
 
+## 1.5.3 - 2020-01-22
+- Fix accented tabs
+
 ## 1.5.2 - 2018-02-22
 - Fix scroll on tab change
 

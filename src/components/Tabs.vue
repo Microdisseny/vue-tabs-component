@@ -165,6 +165,7 @@
                 }
                 
                 return tab.hash;
+                return decodeURIComponent(tab.hash);
 			},
             
             getActiveTab(){
